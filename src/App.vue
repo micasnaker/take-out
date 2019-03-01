@@ -10,6 +10,7 @@
 
 <script>
 import FooterGuid from './components/FooterGuid/FooterGuid'
+
 export default {
   data () {
     return {
@@ -18,7 +19,10 @@ export default {
 
   components: {
     FooterGuid
-  }
+  },
+  mounted() {
+    this.$store.dispatch('getAddress')
+  },
 }
 
 </script>

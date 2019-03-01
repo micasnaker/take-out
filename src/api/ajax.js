@@ -23,7 +23,7 @@ export default function ajax (url, data = {}, type = 'GET') {
     }
     // 成功了调用resolve()
     promise.then(function (response) {
-      resolve(Response.data)
+      resolve(response.data)
     })
     // 失败了调用reject()
       .catch(function (error) {
