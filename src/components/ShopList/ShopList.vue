@@ -4,7 +4,8 @@
     <!-- 首页附近商家 -->
           <div class="shop_container">
             <ul class="shop_list" v-if="shops.length">
-              <li class="shop_li border-1px" v-for="(shop, index) in shops" :key="index">
+              <li class="shop_li border-1px" v-for="(shop, index) in shops" 
+              :key="index" @click="$router.push('/Shop')">
                 <a>
                   <div class="shop_left" >
                     <img class="shop_img" :src="baseImagUrl+shop.image_path">
@@ -55,7 +56,8 @@ import Star from '../Star/Star'
 export default {
   data () {
     return {
-      baseImagUrl:'https://cangdu.org:8001/img/'
+      baseImagUrl:'https://cangdu.org:8001/img/',
+      id : this.$route.params.id
     };
   },
 
@@ -69,7 +71,8 @@ export default {
 
   mounted(){},
 
-  methods: {}
+  methods: {
+  }
 }
 
 </script>
