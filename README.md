@@ -1,4 +1,4 @@
-# gshop
+# micaShop
 
 > A Vue.js project
 
