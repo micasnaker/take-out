@@ -4,16 +4,22 @@
       <ShopHeader></ShopHeader>
       <div class="tab">
         <div class="tab-item">
-          <router-link to="/shop/goods">点餐</router-link>
+          <!-- replace 加上replace: true后，它不会向 history 添加新记录，而是跟它的方法名一样 —— 替换掉当前的 history 记录。 -->
+          <router-link to="/shop/goods" replace>点餐</router-link>
         </div>
         <div class="tab-item">
-          <router-link to="/shop/ratings">评价</router-link>
+          <router-link to="/shop/ratings" replace>评价</router-link>
         </div>
         <div class="tab-item">
-          <router-link to="/shop/info">商家</router-link>
+          <router-link to="/shop/info" replace>商家</router-link>
         </div>
       </div>
+
+  <!-- 缓存路由组件对象 --> 
+  <!-- 好处：复用路由组件对象，复用路由组件获取的后台数据 -->
+      <keep-alive>
       <router-view></router-view>
+      </keep-alive>
   </div>
 </template>
 

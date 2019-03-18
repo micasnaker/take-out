@@ -35,7 +35,7 @@
           <span class="content-tag">
             <span class="mini-tag">{{info.supports[0].name}}</span>
           </span>
-          <span class="activity-content ellipsis">{{info.supports[0].content}}}</span>
+          <span class="activity-content ellipsis">{{info.supports[0].content}}</span>
         </div>
       </div>
       <div class="discounts-right">{{info.supports.length}} 个优惠</div>
